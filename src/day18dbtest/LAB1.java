@@ -1,4 +1,4 @@
-package dbtest;
+package day18dbtest;
 import util.DBUtil;
 
 import java.sql.*;
@@ -10,7 +10,8 @@ public class LAB1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String input = sc.next();
-        String sql = "select LAST_NAME, SALARY, HIRE_DATE, DEPARTMENT_ID from EMPLOYEES where SALARY >= " + input + "";
+        String sql = "select LAST_NAME, SALARY, HIRE_DATE, DEPARTMENT_ID " +
+                "from EMPLOYEES where SALARY >= " + input + "";
 
         Connection conn = DBUtil.getConnection();
         Statement st = null;
@@ -28,13 +29,7 @@ public class LAB1 {
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
-            try {
-                if (rs != null) rs.close();
-                if (st != null) st.close();
-                if (conn != null) conn.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+            DBUtil.dbClose(rs, st, conn);
         }
         sc.close();
     }

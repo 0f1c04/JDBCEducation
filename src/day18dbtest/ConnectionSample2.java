@@ -1,4 +1,4 @@
-package dbtest;
+package day18dbtest;
 
 import java.sql.*;
 

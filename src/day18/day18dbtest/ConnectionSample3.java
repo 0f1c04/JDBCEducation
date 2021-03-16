@@ -1,4 +1,4 @@
-package day18dbtest;
+package day18.day18dbtest;
 
 import util.DBUtil;
 

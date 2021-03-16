@@ -1,4 +1,4 @@
-package model;
+package day19.model;
 
 import util.DBUtil;
 

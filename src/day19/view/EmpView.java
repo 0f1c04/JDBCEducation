@@ -1,6 +1,6 @@
-package view;
+package day19.view;
 
-import model.EmpVO;
+import day19.model.EmpVO;
 
 import java.util.List;
 

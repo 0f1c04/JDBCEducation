@@ -1,9 +1,8 @@
-package day19dbtest;
+package day19.day19dbtest;
 
 import util.DBUtil;
 
 import java.sql.*;
-import java.util.Scanner;
 
 public class JDBC_LAB1 {
     static Connection conn;

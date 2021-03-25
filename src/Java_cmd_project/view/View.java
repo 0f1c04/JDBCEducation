@@ -1,17 +1,20 @@
-package project.view;
+package Java_cmd_project.view;
 
-import project.model.VO;
+import Java_cmd_project.model.VO;
 
 import java.util.List;
 
 public class View {
 
     public static void revDisplay(List<VO> revList) {
-        System.out.println("------- 모든 리뷰 조회 -------");
+        System.out.println("---------- 모든 리뷰 조회 ----------");
         for (VO list : revList) {
-            System.out.println(list.getResName() + "의 평점: " + list.getRevGpa() + "\n" +
+            System.out.println("리뷰번호: " + list.getRevNo() + "\n" +
+                    "음식점 고유번호: " + list.getResNo() + "\n" +
+                    list.getResName() + "의 평점: " + list.getRevGpa() + "\n" +
                     "리뷰 내용: " + list.getRevContents() + "\n" +
                     "리뷰 작성일자: " + list.getRevVisitDate());
+            System.out.println("----------------------------------");
         }
     }
 
@@ -37,6 +40,11 @@ public class View {
 		System.out.println("----------------------------------");
     }
 
+    public static void display(String message) {
+        System.out.println("---------- 알림 ----------");
+        System.out.println(message);
+    }
+
     public static void printBanner() {
         System.out.println("" +
                 "╔═╗┌─┐┌┬┐┌─┐┌┬┐┬ ┬┬┌┐┌┌─┐  ┌─┐┌─┐┬─┐  \n" +
@@ -55,15 +63,16 @@ public class View {
                     "3. 프로그램 종료\n" +
                     "> ");
         } else if (kind == 1) { // user menu
-            System.out.println("" +
+            System.out.print("" +
                     "사용자 메뉴\n" +
                     "1. 전체 음식점 모두 알려줘\n" +
                     "2. 주변 음식점 알려줘\n" +
                     "3. 특정 음식점 알려줘\n" +
                     "4. 리뷰 메뉴\n" +
+                    "5. 프로그램 종료\n" +
                     "> ");
         } else if (kind == 2) { // admin memu
-			System.out.println("" +
+			System.out.print("" +
 					"관리자 메뉴\n" +
 					"1. 음식점 추가\n" +
 					"2. 음식점 삭제\n" +

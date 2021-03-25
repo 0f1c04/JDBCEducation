@@ -1,4 +1,4 @@
-package project.model;
+package Java_cmd_project.model;
 
 import java.sql.Date;
 
@@ -14,9 +14,22 @@ public class VO {
     int menuPrice;
 
     // review field
+    int revNo;
     float revGpa;
     String revContents;
     Date revVisitDate;
+
+    public VO() {
+
+    }
+
+    public int getRevNo() {
+        return revNo;
+    }
+
+    public void setRevNo(int revNo) {
+        this.revNo = revNo;
+    }
 
     public int getResNo() {
         return resNo;
